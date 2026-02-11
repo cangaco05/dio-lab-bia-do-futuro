@@ -38,5 +38,13 @@
     "rentabilidade": "Variável",
     "aporte_minimo": 100.00,
     "indicado_para": "Perfil arrojado com foco no longo prazo"
+  },
+  {
+    "nome": "Fundo Imobiliarios (FII)",
+    "categoria": "fundo",
+    "risco": "alto",
+    "rentabilidade": "DY costuma ficar entre 6% a 10% ao ano",
+    "aporte_minimo": 100.00,
+    "indicado_para": "Perfil moderado ao arrojado com foco no longo prazo e com risco de desvalorização"
   }
 ]
