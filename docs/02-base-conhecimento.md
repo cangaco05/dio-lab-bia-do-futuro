@@ -32,28 +32,15 @@ O produto Fundo Imobiliarios (Fii) incluir(expandio) pois e produtos muito utili
 Existe duas possibilidades, injetar os dados diretamente, no pront (crtl+c, crtl+v) ou carregar os arquivos via cóigo, como exemplo abaixo:
 
 ```python
-import pandas as pd
 import json
-from pathlib import Path
+import pandas as pd
 
-DATA_DIR = Path("data")
 
-# CSVs
-transacoes = pd.read_csv(DATA_DIR / "transacoes.csv")
-historico_atendimento = pd.read_csv(DATA_DIR / "historico_atendimento.csv")
-
-# JSONs
-with open(DATA_DIR / "perfil_investidor.json", encoding="utf-8") as f:
-    perfil_investidor = json.load(f)
-
-with open(DATA_DIR / "produtos_financeiros.json", encoding="utf-8") as f:
-    produtos_financeiros = json.load(f)
-
-# Exemplos rápidos de uso
-print("Transações:", transacoes.shape)
-print("Histórico de atendimento:", historico_atendimento.shape)
-print("Perfil investidor (chaves):", list(perfil_investidor.keys()))
-print("Qtd produtos financeiros:", len(produtos_financeiros))
+# ========= CAREEGAR DADOS ========== #
+perfil = json.load(open('./data/perfil_investidor.json'))
+transacoes = pd.read_csv('./data/transasoes.csv')
+historico = pd.read_csv('./data/historico_atendimento.csv')
+produtos = json.load(open('.data/produtos_financeiros.json'))
 ```
 
 ### Como os dados são usados no prompt?
